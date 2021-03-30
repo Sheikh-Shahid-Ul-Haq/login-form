@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <div class="bg-quatinary m-6 p-16 rounded-lg">
+        <div class="overflow-hidden rounded-2xl bg-white flex">
+            <div class="bg-tertiary flex-half text-primary">
+                
+                <h1 class="text-3xl font-bold color-primary p-12 flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 mr-1 fill-secondary ">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                      </svg>
+                      Ontime.
+                </h1>
+                <h2 class="content-center text-4xl font-bold text-blue-800 pl-12 pb-8">Unlock Your Team <span class="text-secondary"> Performance</span></h2>
+                <div>
+                    <img src="img/students-image.jpg" alt="team-image" class="pl-8 pb-8 h-long">
+                </div>
+
+            </div>
+
+            <div class="flex-half flex-col p-28 space-y-36 bg-white">
+                <div class="flex-grow">
+                    <h1 class="text-3xl font-bold text-blue-800 py-2 text-primary">Welcome to Ontime</h1>
+                    <span class="text-secondary">Unlock Your Team Performance</span>
+                    <form action="#" onsubmit="return checkValidation()">  
+                        <div class="py-2">
+                            <label for="email" class="text-secondary">Email address</label>
+                            <input type="email" placeholder="e-mail" id="email" required class="w-full border border-blue-200 p-2 text-secondary focus:border-transparent focus:outline-secondary">
+                            <span class="text-red invisible" id="valid-e">Invalid Email</span>
+                        </div>  
+                        <div class="py-2">
+
+                            <label for="password" class="text-secondary ">Password</label>
+                            <input type="password" placeholder="Enter Password" id="password" required class="w-full border border-blue-200 p-2 text-secondary focus:border-transparent focus:outline-secondary">
+                            <span class=" text-red invisible" id="valid-p">Invalid Password</span>
+                        </div>
+                        <div class="flex">
+                            <span class="justify-start flex-grow text-base text-red">
+                                Invalid Username or Password
+                            </span>
+                            <div class="py-2  text-primary">
+                                <a href="#" class="text-primary font-medium">Forgot password?</a>
+                                </div>
+                        </div>
+                        
+                        <div class="py-4">
+                        <button class="bg-secondary w-full py-4" type="submit">LogIn</button>
+                        </div>
+                        <div class="flex justify-center">
+                            <span class="text-primary">Don't have an account? <a href="#" class="text-secondary font-bold">Register</a> </span>
+                        </div>
+                    
+                    </form>
+                </div>
+                <div class="flex justify-center text-secondary">
+                    &copy;2021 all rights reserved.
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <script>
+        function checkValidation(){
+        var username= document.getElementById("email").value;
+        var password= document.getElementById("password").value;
+
+        if (username==''){
+	     
+        document.getElementById("valid-e").classList.remove("invisible"); 
+        return false;
+        }
+        if (password==''){
+         
+            document.getElementById("valid-p").classList.remove("invisible");  
+        return false;
+
+        }
+        return true;
+
+}
+    </script>
+</body>
+
+</html>
